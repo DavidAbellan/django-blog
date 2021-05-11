@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp'
+    'mainapp',
+    #bastaría con poner solo pages para cargar el módulo
+    #esto es para cambiar el nombre en el manager
+    'pages.apps.PagesConfig'
 ]
 
 MIDDLEWARE = [
