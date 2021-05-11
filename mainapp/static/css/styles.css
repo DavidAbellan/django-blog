@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+#logotipo img{
+    width: 200px ;
+}
+#logotipo {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    background-image: url("../images/header.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100%; 
+}
+#logotipo h1 {
+    margin-left: 10%;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 70px;
+    color:#bae543;
+    -webkit-text-stroke: 2px black;
+
+}
+nav li {
+    display: inline;
+    margin: 5px;
+    font-family: 'Noto Sans', sans-serif ;
+}
+nav li:hover {
+    transition: 1s;
+    background-color: #bae543;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 20px;
+}
+

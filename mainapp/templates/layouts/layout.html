@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <meta charset="utf-8" />
+    <title>Django-Blog |
+        {% block title %}
+
+        <!--Código de templates-->
+        
+
+        {% endblock %}
+
+        layout
+    </title>
+</head>
+
+<body>
+
+    <header>
+
+        <div id="logotipo">
+            <img src="{% static 'images/icon.png'%}" />
+            <h1>DjangoBlog</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'inicio' %}"> Inicio </a>
+            </li>
+            <li>
+                <a href="/about"> Sobre Nosotros... </a>
+            </li>
+          
+
+        </ul>
+        <div class="barra">
+            <span class="esquina-izq"></span>
+            <span class="relleno-bar"></span>
+    
+            <span class="esquina-der"></span>
+        </div>
+
+    </nav>
+    
+     <br/>
+     <br/>
+    <div id="content">
+        <h2 class="title">Título de prueba</h2>
+        {% block content %}
+
+        <!--Código de templates-->
+        <br/>
+        <strong>Contenido de bloque original!!!!por defecto</strong>
+
+        {% endblock %}
+
+    </div>
+    <footer>
+        este es mi footer, hay muchos otros pero este es el mío
+        </br>
+        {%now "d/m/Y"%}
+    </footer>
+</body>
+
+</html>
