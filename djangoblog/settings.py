@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'ckeditor',
+    'blog.apps.BlogConfig',
     #bastaría con poner solo pages para cargar el módulo
     #esto es para cambiar el nombre en el manager
     'pages.apps.PagesConfig'
