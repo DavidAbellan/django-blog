@@ -1,0 +1,26 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{%if messages%}
+{%for message in messages%}
+<div style="background-color:blue" > <p>{{message}}</p></div>
+{%endfor%}
+{%endif%}
+{%for article in articles%}
+<!--if articles.image.url|lenght >=1-->
+{%if article.image != 'null' %}
+<div class="art">
+<div class="imagen">
+    <img src="{{article.image.url}}"/>
+</div>    
+{%endif%}
+<h1>{{article.title}}</h1>
+<p class="articulocontenido">{{article.content|safe}}</p>
+<p>{{article.user}}--{{article.created_at}}</p>
+{%for category in article.categories.all %}
+<p>{{category.name}}</p>
+</div>
+{%endfor%}
+{%endfor%}
+
+
+{% endblock content %}

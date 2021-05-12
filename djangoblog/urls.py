@@ -17,11 +17,12 @@ from django import urls
 from django.contrib import admin
 from django.urls import path, include
 from mainapp import views 
-from pages import views as page_views
 
 urlpatterns = [
     path('', views.index, name="inicio"),
     path('admin/', admin.site.urls),
     path('about/', views.about, name= "sobrenosotros" ),
-    path('',include('pages.urls'))
+    path('',include('pages.urls')),
+    path('',include('blog.urls'))
+
 ]
