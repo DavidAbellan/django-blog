@@ -38,9 +38,7 @@
             </li>
 
             {%endfor%}
-            <li>
-                <a href="/about"> Sobre Nosotros... </a>
-            </li>
+            
           
 
         </ul>
@@ -60,6 +58,31 @@
 
     </div>
     <footer>
+        <div class="patrocinadores">
+        <br/>
+        <ul>
+           <li>
+              <img src="{% static 'images/cocacola.png'%}" />
+           </li>
+           <li>
+              <img src="{% static 'images/cod.png'%}" />
+           </li>
+           <li>
+              <img src="{% static 'images/nike.png'%}" />
+           </li>
+           <li>
+              <img src="{% static 'images/fanta.png'%}" />
+           </li>
+           <li>
+              <img src="{% static 'images/sansilvestre.png'%}" />
+           </li>
+
+
+
+        </ul>
+
+
+        </div>
         <p class="subtitle"> Todos los textos e imágenes tienen los derechos reservados en la UE , en EEUU un poco sólo y en China casi nada.
          El autor <br/> se reserva el derecho a matar, más si hay dinero de por medio, a cualquier forma de vida sin importar sexo o religión,
          edad,<br/> crédito en la tarjeta o si tiene bufanda del Madrid o del Barsa; Sobre todo si es chino. Todo esto está contemplado
@@ -68,7 +91,7 @@
         
 
         <p class="subtitle"> este es mi footer, hay muchos otros pero este es el mío...</p>
-        {%now "d/m/Y"%}
+        <p>{%now "d/m/Y"%}</p>
     </footer>
 </body>
 

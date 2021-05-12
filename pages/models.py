@@ -8,6 +8,9 @@ class Page(models.Model):
     #content = models.TextField(verbose_name='Contenido')
     #Editor de texto enriquecido dentro de panel de admin
     content = RichTextField(verbose_name='Contenido')
+     
+    #agregar orden a las páginas 
+    order = models.IntegerField(default=0,verbose_name="Orden")
 
     slug= models.CharField(max_length=150, verbose_name='URL',unique=True) 
     visible = models.BooleanField(verbose_name="¿Visible?")

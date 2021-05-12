@@ -19,6 +19,12 @@
     -webkit-text-stroke: 2px black;
 
 }
+.patrocinadores ul li {
+    display: inline;
+}
+.patrocinadores ul li img{
+    width: 100px;
+}
 nav li {
     display: inline;
     margin: 5px;
@@ -54,6 +60,14 @@ body{
 
 }
 footer {
-    background-color: #bae543;
+    background-color:#809c2c;
+    position:absolute;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-left: 2em;
+    color: white;
 }
 
