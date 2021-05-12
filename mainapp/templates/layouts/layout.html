@@ -32,6 +32,12 @@
             <li>
                 <a href="{% url 'inicio' %}"> Inicio </a>
             </li>
+            {%for page in pages%}
+            <li>
+                <a href="{% url 'pagina' page.2 %}"> {{page.1}} </a>
+            </li>
+
+            {%endfor%}
             <li>
                 <a href="/about"> Sobre Nosotros... </a>
             </li>

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
+    'ckeditor',
     #bastaría con poner solo pages para cargar el módulo
     #esto es para cambiar el nombre en el manager
     'pages.apps.PagesConfig'
@@ -68,6 +69,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #context processor se carga aquí y está disponible en todas las páginas
+                'pages.context_processor.get_pages'
             ],
         },
     },

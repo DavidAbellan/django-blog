@@ -1,0 +1,10 @@
+{% extends 'layouts/layout.html' %}
+ {%block content%}
+<div class="contenido">
+<h2>{{page.title}}</h2>
+<span>{{page.created_at}}</span>
+<!--safe para que interprete que es html lo que llega desde la página creada en admin
+   tras poner el ckeditor-->
+<p>{{page.content|safe}}</p>
+</div>
+ {%endblock%}
