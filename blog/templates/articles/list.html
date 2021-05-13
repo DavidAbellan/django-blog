@@ -1,5 +1,7 @@
 {% extends 'layouts/layout.html' %}
 {% block content %}
+{% load static %}
+
 {%if messages%}
 {%for message in messages%}
 <div style="background-color:blue" > <p>{{message}}</p></div>
@@ -7,20 +9,31 @@
 {%endif%}
 {%for article in articles%}
 <!--if articles.image.url|lenght >=1-->
-{%if article.image != 'null' %}
 <div class="art">
+{%if article.image != 'null'%}
 <div class="imagen">
     <img src="{{article.image.url}}"/>
-</div>    
+</div> 
+{%else%}
+   <div class="imagen">
+    <img src="{% static 'images/no-image.png'%}"/>
+</div> 
 {%endif%}
+<div class="firstColumn">
 <h1>{{article.title}}</h1>
-<p class="articulocontenido">{{article.content|safe}}</p>
-<p>{{article.user}}--{{article.created_at}}</p>
+<p>{{article.content|safe}}</p>
+<br/>
+<p class="autorfecha">{{article.user}}--{{article.created_at}}</p>
+<div class="categories">
 {%for category in article.categories.all %}
+<div class= "categorybox">
 <p>{{category.name}}</p>
 </div>
-{%endfor%}
-{%endfor%}
 
+{%endfor%}
+</div>
+</div>
+</div>
+{%endfor%}
 
 {% endblock content %}
