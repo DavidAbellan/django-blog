@@ -17,7 +17,7 @@ class Category(models.Model) :
 class Article(models.Model) :
     title = models.CharField(max_length=150, verbose_name='Título')
     content = RichTextField(verbose_name='Contenido')
-    image = models.ImageField(verbose_name='Imagen', default='null')
+    image = models.ImageField(verbose_name='Imagen', default='null', upload_to="articles")
     #Editable = false para que no se pueda cambiar de user en la admin
     user = models.ForeignKey(User, editable=False, verbose_name= "Autor", on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category, verbose_name="Categorías",blank=True)
@@ -27,6 +27,7 @@ class Article(models.Model) :
     class Meta :
         verbose_name="Artículo"
         verbose_name_plural="Artículos"
+        ordering = ['-created_at']
     def __str__(self):
         return self.title    
 
