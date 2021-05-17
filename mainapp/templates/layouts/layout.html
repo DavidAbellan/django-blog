@@ -32,13 +32,21 @@
             <li>
                 <a href="{% url 'inicio' %}"> Inicio </a>
             </li>
+             <li>
+                <a class="subcategories" href="{% url 'lista_articulos' %}"> Categorías </a>
+                <ul class="subcategory">
+                     {%for category in categories%} 
+                    <li>{{category.1}}</li>
+                     {%endfor%}
+
+                </ul>
+            </li>
             {%for page in pages%}
             <li>
                 <a href="{% url 'pagina' page.2 %}"> {{page.1}} </a>
             </li>
 
             {%endfor%}
-            
           
 
         </ul>

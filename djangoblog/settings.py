@@ -71,7 +71,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 #context processor se carga aquí y está disponible en todas las páginas
-                'pages.context_processor.get_pages'
+                'pages.context_processor.get_pages',
+                'blog.context_processor.get_categories'
             ],
         },
     },

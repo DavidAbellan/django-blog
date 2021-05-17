@@ -5,6 +5,7 @@ from . import views
 #tenga su fichero url
 
 urlpatterns = [
-    path('articulos/', views.articles, name="lista_articulos")
+    path('articulos/', views.articles, name="lista_articulos"),
+    path('articulo/<int:article_id>', views.article, name='article')
 
 ]

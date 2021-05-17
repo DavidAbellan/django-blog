@@ -20,7 +20,7 @@
 </div> 
 {%endif%}
 <div class="firstColumn">
-<h1>{{article.title}}</h1>
+<h1><a href="{% url 'article' article.id %}">{{article.title}}</a></h1>
 <p>{{article.content|safe}}</p>
 <br/>
 <p class="autorfecha">{{article.user}}--{{article.created_at}}</p>
