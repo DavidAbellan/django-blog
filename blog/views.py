@@ -1,14 +1,24 @@
+from django.core import paginator
 from django.shortcuts import get_object_or_404, render
 from .models import Category, Article
 
+###Paginación
+from django.core.paginator import Paginator
+
 def articles(request) :
+    #sacar artículos
     articles = Article.objects.all()
+    #paginar articulos
+    paginator = Paginator(articles, 5)
+    #Recoger numero pagina
+    page_number = request.GET.get('page')
+    page_articles = paginator.get_page(page_number)
 
      
 
     return render(request,'articles/list.html' , {
         'title' : 'Artículos',
-        'articles': articles
+        'articles': page_articles
 
     })
 
