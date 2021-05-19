@@ -107,7 +107,7 @@ DATABASES = {
 
 pip install mysqlclient( si no instala la librería , hay que buscarla a mano en google)
 
-hacer las migraciones makemigrates, sqlmigration, migrate
+hacer las migraciones  migrate
 """
 
 # Password validation
