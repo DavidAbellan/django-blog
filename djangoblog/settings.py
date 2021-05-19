@@ -90,7 +90,25 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+"""
+Configuración database externa
 
+Crear bbdd en phpmyadmin -- proyectoDjango
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'proyectoDjango',
+        'USER' : 'root',
+        'PASSWORD' : '',
+        'HOST':'localhost',
+        'PORT':3306
+    }
+
+pip install mysqlclient( si no instala la librería , hay que buscarla a mano en google)
+
+hacer las migraciones makemigrates, sqlmigration, migrate
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
