@@ -1,11 +1,15 @@
 {% extends 'layouts/layout.html' %}
  {%block content%}
 <h1>{{title}}</h1>
-<form method="post" action="">
+<!--Mostrar los errores en el formulario en el caso que hayan-->
+{{register_form.errors}}
+
+
+<form class="registerFormu" method="post" action="">
     {% csrf_token %}
 <!--{{register_form.as_p}}-->
     {% for field in register_form%}
-       {{field.label}}
+       <label>{{field.label}}</label>
        {{field}}
 
     {% endfor %}

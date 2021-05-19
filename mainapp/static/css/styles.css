@@ -136,3 +136,8 @@ p.autorfecha {
     font-size: 12px;
     letter-spacing: -1pt;
 }
+.registerFormu{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}

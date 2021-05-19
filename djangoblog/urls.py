@@ -24,6 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', views.about, name= "sobrenosotros" ),
     path('register/', views.register_page, name= "registro" ),
+    path('login/', views.login_user, name= "login" ),
+    path('logout/', views.logout_user, name= "logout" ),
+
 
     path('',include('pages.urls')),
     path('',include('blog.urls'))
